@@ -1,21 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
-/* By calling :root, we define the scoop to be the root,
-so we may use the vars anywhere. */
 :root {
   --success-color: #2ecc71;
   --error-color: #e74c3c;
 }
 
-/* No padding effect on elements */
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: #f9fafb;
-  font-family: "Open Sans", "sans-serif";
-  /* All the direct children of the body, will be a flex item. */
+  font-family: "Open Sans", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +52,6 @@ h2 {
   border-radius: 4px;
   display: block;
   width: 100%;
-  margin-right: 400px;
   padding: 10px;
   font-size: 14px;
 }
