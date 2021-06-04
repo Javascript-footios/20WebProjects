@@ -2,7 +2,9 @@ const video = document.getElementById("video");
 const play = document.getElementById("play");
 const stop = document.getElementById("stop");
 const progress = document.getElementById("progress");
+const volume = document.getElementById("volume");
 const timestamp = document.getElementById("timestamp");
+const volumestamp = document.getElementById("volumestamp");
 
 // Play & pause video
 function toggleVideoStatus() {
@@ -50,6 +52,17 @@ function stopVideo() {
   video.pause();
 }
 
+// Initial volume
+// volume.value = 33; // is set in html
+video.volume = volume.value / 100;
+volumestamp.innerHTML = 33;
+
+// Adjust volume
+function setVideoVolume() {
+  video.volume = volume.value / 100;
+  volumestamp.innerHTML = volume.value;
+}
+
 // Event listeners
 video.addEventListener("click", toggleVideoStatus);
 video.addEventListener("pause", updatePlayIcon);
@@ -61,3 +74,4 @@ play.addEventListener("click", toggleVideoStatus);
 stop.addEventListener("click", stopVideo);
 
 progress.addEventListener("change", setVideoProgress);
+volume.addEventListener("change", setVideoVolume);

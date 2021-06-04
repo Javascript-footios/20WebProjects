@@ -15,6 +15,21 @@
   </head>
   <body>
     <h1>Custom Video Player</h1>
+    <div class="controls volume">
+      <button class="btn">
+        <span class="fa fa-volume-up fa-2x"></span>
+      </button>
+      <input
+        type="range"
+        id="volume"
+        class="progress volume"
+        min="0"
+        max="100"
+        step="1"
+        value="33"
+      />
+      <span id="volumestamp">0</span>
+    </div>
     <video
       src="videos/gone.mp4"
       id="video"
