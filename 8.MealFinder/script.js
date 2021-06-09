@@ -109,6 +109,9 @@ function addMealToDOM(meal) {
             </ul>
           <section>
       </article>
+      <footer>
+        <a class="backToTop" href="#meal-finder">Back to top</a>
+      </footer>
   </article>
   `;
 }
