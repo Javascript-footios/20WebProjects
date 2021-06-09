@@ -13,3 +13,7 @@ https://github.com/bradtraversy/vanillawebprojects
 Any images, videos, assets that are needed will always be in this repo. I will also be adding the code to the sections as well.
 
 - For the exchange rate calculator, we have to sing in and get an API key [ExchangeRate-API](https://app.exchangerate-api.com/dashboard)
+
+8. ### Meal Finder
+
+- As about `<div class="meal-info" data-mealID="${meal.idMeal}">` check: [Using data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
