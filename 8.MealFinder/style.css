@@ -152,7 +152,7 @@ input[type="text"] {
 
 .single-meal-info {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   margin: 20px;
@@ -180,6 +180,10 @@ input[type="text"] {
   font-weight: bold;
   padding: 5px;
   margin: 0 5px 5px;
+}
+
+.backToTop {
+  color: #fff;
 }
 
 @media (min-width: 700px) {
