@@ -29,12 +29,12 @@ function searchMeal(e) {
           mealsEl.innerHTML = data.meals
             .map(
               (meal) => `
-          <div class="meal">
+          <figure class="meal">
             <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
             <div class="meal-info" data-mealID="${meal.idMeal}">
               <h3>${meal.strMeal}</h3>
             </div>
-          </div>
+          </figure>
           `
             )
             .join("");
@@ -89,21 +89,25 @@ function addMealToDOM(meal) {
   }
   // console.log(ingredients);
   single_mealEl.innerHTML = `
-  <div class="single-meal" >
-    <h1>${meal.strMeal}</h1>
-      <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
-      <div class="single-meal-info">
-       ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ""}
+  <article class="single-meal" >
+    <section>
+      <h1>${meal.strMeal}</h1>
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+        <div class="single-meal-info">
+        ${meal.strCategory ? `<p> ${meal.strCategory}</p>` : ""}
         ${meal.strArea ? `<p>${meal.strArea}</p>` : ""}
-      </div>
-        <div class="main">
+        </div>
+    </section>
+        <article class="ingredients-container">
           <p>${meal.strInstructions}</p>
           <h2>Ingredients</h2>
-          <ul>
-          ${ingredients.map((ing) => `<li>${ing}</li>`).join("")}
-          </ul>
-      </div>
-  </div>
+          <section>
+            <ul>
+            ${ingredients.map((ing) => `<li>${ing}</li>`).join("")}
+            </ul>
+          <section>
+      </article>
+  </article>
   `;
 }
 
