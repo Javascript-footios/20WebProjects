@@ -130,6 +130,7 @@ function updateLocalStorage() {
 // Init App
 function init() {
   income_list.innerHTML = "";
+  expense_list.innerHTML = "";
   transactions.forEach(addTransactionDOM);
   updateValues();
 }

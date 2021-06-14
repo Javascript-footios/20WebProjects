@@ -104,6 +104,14 @@ input[type="number"] {
   width: 100%;
 }
 
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
 .list {
   list-style-type: none;
   padding: 0;
@@ -130,11 +138,19 @@ input[type="number"] {
   margin-right: 40px;
 }
 
+.lists-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .income-list .expense-list {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .income-list {
@@ -149,16 +165,6 @@ input[type="number"] {
   border-right: 5px solid var(--red-color);
 }
 
-.lists-container {
-  background-color: #fff;
-  box-shadow: var(--box-shadow);
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-}
-
-/* Change button appearence  
-Give buttons a press effect */
 .delete-btn {
   cursor: pointer;
   background-color: #e74c3c;
