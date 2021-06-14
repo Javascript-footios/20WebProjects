@@ -1,7 +1,8 @@
 const balance = document.getElementById("balance");
 const money_plus = document.getElementById("money-plus");
 const money_minus = document.getElementById("money-minus");
-const list = document.getElementById("list");
+const income_list = document.getElementById("income-list");
+const expense_list = document.getElementById("expense-list");
 const form = document.getElementById("form");
 const text = document.getElementById("text");
 const amount = document.getElementById("amount");
@@ -65,8 +66,9 @@ function addTransactionDOM(transaction) {
   const sign = transaction.amount < 0 ? "-" : "+";
   const item = document.createElement("li");
 
-  item.classList.add(`${transaction.amount < 0 ? "minus" : "plus"}`);
+  item.classList.add(transaction.amount < 0 ? "minus" : "plus");
 
+  console.log(item);
   item.innerHTML = ` ${transaction.text} 
             <span>${sign}${Math.abs(transaction.amount)}</span>
             <button class="delete-btn" onclick="removeTransaction(${
@@ -74,7 +76,8 @@ function addTransactionDOM(transaction) {
             })">x</button>
   `;
 
-  list.appendChild(item);
+  if (transaction.amount > 0) income_list.appendChild(item);
+  else expense_list.appendChild(item);
 }
 
 // Update the balance, income and expense
@@ -106,7 +109,7 @@ function updateValues() {
         .filter((item) => item < 0)
         .reduce((acc, item) => (acc -= item), 0) * -(1)
         .toFixed(2);
-  console.log(total);
+
   balance.innerText = `$${total}`;
   money_plus.innerText = `$${income}`;
   money_minus.innerText = `$${expense}`;
@@ -121,12 +124,12 @@ function removeTransaction(id) {
 
 // Update local storage transactions
 function updateLocalStorage() {
-  localStorage.setItem("transcactions", JSON.stringify(transactions));
+  localStorage.setItem("transactions", JSON.stringify(transactions));
 }
 
 // Init App
 function init() {
-  list.innerHTML = "";
+  income_list.innerHTML = "";
   transactions.forEach(addTransactionDOM);
   updateValues();
 }

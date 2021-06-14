@@ -24,7 +24,7 @@ body {
 
 .container {
   margin: 30px auto;
-  width: 350px;
+  width: 450px;
 }
 
 h1 {
@@ -118,13 +118,27 @@ input[type="number"] {
 .list li {
   background-color: #fff;
   box-shadow: var(--box-shadow);
+  width: 140px;
   border-radius: 5px;
   color: #333;
   display: flex;
   justify-content: space-between;
   position: relative;
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.income-list .expense-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.income-list {
+  border-right: var(--border);
 }
 
 .list li.plus {
@@ -133,6 +147,14 @@ input[type="number"] {
 
 .list li.minus {
   border-right: 5px solid var(--red-color);
+}
+
+.lists-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Change button appearence  
@@ -157,5 +179,5 @@ Give buttons a press effect */
 
 .list li:hover .delete-btn {
   opacity: 0.5;
-  left: -5px;
+  left: -3px;
 }
