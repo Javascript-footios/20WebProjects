@@ -14,10 +14,13 @@ Any images, videos, assets that are needed will always be in this repo. I will a
 
 General:
 
-- `<section>` is for grouping distinct sections of content or functionality,
+- `<section>` is for grouping distinct sections of content or functionality. Each section should be identified, typically by including a heading (h1-h6 element) as a child of the `<section>` element. The <section> element is not a generic container element. When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the <div> element instead.
 - `<article>` is for containing related individual standalone pieces of content, such as individual blog posts, videos, images or news items. Think of it this way - if you have a number of items of content, each of which would be suitable for reading on their own, and would make sense to syndicate as separate items in an RSS feed, then `<article>` is suitable for marking them up.
+- `<div>`The `<div>` element has no special meaning at all. It represents its children. It can be used with the `class`, `lang`, and `title` attributes to mark up semantics common to a group of consecutive elements. **Note:** Authors are strongly encouraged to view the `<div>` element as an element of last resort, for when no other element is suitable. Use of more appropriate elements instead of the `<div>` element leads to better accessibility for readers and easier maintainability for authors.
 
-- For the exchange rate calculator, we have to sing in and get an API key [ExchangeRate-API](https://app.exchangerate-api.com/dashboard)
+4. ### Exchange rate calculator
+
+- For the exchange rate calculator, we have to sign in and get an API key [ExchangeRate-API](https://app.exchangerate-api.com/dashboard)
 
 8. ### Meal Finder
 
