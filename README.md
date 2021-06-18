@@ -22,3 +22,11 @@ General:
 8. ### Meal Finder
 
 - As about `<div class="meal-info" data-mealID="${meal.idMeal}">` check: [Using data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+
+10. ### Music Player
+
+- [box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+- [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+- [Event.srcElement (DEPRECATED) ](https://developer.mozilla.org/en-US/docs/Web/API/Event/srcElement)
+- [Element.clientWidth](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth)
+- [animation-play-state](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state)
