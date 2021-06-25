@@ -17,16 +17,16 @@ async function showPosts() {
   // loading.classList.add("show");
   const posts = await getPosts();
   posts.forEach((post) => {
-    const postEl = document.createElement("div");
+    const postEl = document.createElement("article");
     postEl.classList.add("post");
     postEl.innerHTML = `
             <div class="number">${post.id}</div>
-            <div class="post-info">
-            <h2 class="post-title">${post.title}</h2>
-            <p class="post-body">
-            ${post.body}
-            </p>
-            </div>
+              <section class="post-info">
+                <h2 class="post-title">${post.title}</h2>
+                  <p class="post-body">
+                  ${post.body}
+                  </p>
+              </section>
             `;
     postContainer.appendChild(postEl);
     // loading.classList.remove("show");
