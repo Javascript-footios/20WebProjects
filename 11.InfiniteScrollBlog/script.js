@@ -44,7 +44,7 @@ function filterPosts(e) {
     const body = post.querySelector(".post-body").innerText.toUpperCase();
 
     if (title.indexOf(term) > -1 || body.indexOf(term) > -1) {
-      post.style.display = "fles";
+      post.style.display = "flex";
     } else {
       post.style.display = "none";
     }
