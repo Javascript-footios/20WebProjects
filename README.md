@@ -33,3 +33,5 @@ General:
 - [Event.srcElement (DEPRECATED) ](https://developer.mozilla.org/en-US/docs/Web/API/Event/srcElement)
 - [Element.clientWidth](https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth)
 - [animation-play-state](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state)
+
+11. ### Infinite Scroll Posts | Fetch, Async/Await, CSS Loader
